@@ -1,5 +1,7 @@
 import re
 
+import logging
+
 str1 = r'xf_product_v7.10.0_hyy_guanwang_07_19_15_43.apk'
 str2 = r'xm_product_v7.10.0_flavortest_07_19_15_43.apk'
 
@@ -41,3 +43,4 @@ def get_appname(apkname):
 def re_do():
     print 'channel:', get_channel(str1), '\tnetwork:', get_network(str1), '\tappname:', get_appname(str1)
     print 'channel:', get_channel(str2), '\tnetwork:', get_network(str2), '\tappname:', get_appname(str2)
+    logging.warning('channel:' + get_channel(str1)+'\tnetwork:'+get_network(str1)+'\tappname:'+get_appname(str1))
